@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            background: #263445;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        .text {
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+        }
+
+        #game-over {
+            margin-bottom: 5px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+        .arrow-buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .arrow-buttons-bottom {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .arrow-button {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #space-button {
+            margin-top: 40px;
+            margin-right: 40px;
+            height: 40px;
+            width: 150px;
+            display: block;
+            cursor: pointer;
+        }
+
+        .scores {
+            display: flex;
+            justify-content: center;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 15px;
+        }
+
+        #highscore {
+            margin-right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="scores">
+        <h2 id="highscore">Highscore: 0</h2>
+        <h2 id="currentscore">Score: 0</h2>
+    </div>
+    <canvas style="border: 1px solid black; margin: 15px;" height="510" width="690" id="canvas"></canvas>
+    <div class="text">
+        <h1 style="display: none;" id="game-over">Game Over</h1>
+        <h3 id="new-game">Space Button to start the Game</h3>
+    </div>
+    <div class="buttons">
+        <button id="space-button">Space</button>
+        <div class="arrow-buttons">
+            <button id="up-button" class="arrow-button">↑</button>
+            <div class="arrow-buttons-bottom">
+                <button id="left-button" class="arrow-button">←</button>
+                <button id="down-button" class="arrow-button">↓</button>
+                <button id="right-button" class="arrow-button">→</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
